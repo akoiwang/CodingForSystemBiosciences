@@ -205,25 +205,21 @@ Challenge 2: How many lines are there in total for each `.fa` or `fasta` file?
 Challenge 3: Try the same commands on `real_FASTA.fa` and `real_GFF.gff`
 - In `real_GFF.gff` files, check how many lines contain information about “CDS”
 (Hint: use `grep “patterntomatch” filename` combine with `wc -l` using pipe ( `|` ))
-	In mini_FASTA and real_FASTA, check how many sequences the file contain. (Hint, each sequence will contain a header line, starting with >)
+- In `mini_FASTA` and `real_FASTA`, check how many sequences the file contain. 
+(Hint, each sequence will contain a header line, starting with >)
 
-On real_GFF file, 
-	select only “CDS” information from chromosome “Schisto_mansoni.Chr_2.unplaced.SC_0213” 
-(Hint: use grep twice connect by pipe ( | ))
-	and save this information to a new file
-(Hint: use > or >> )
+Challenge 4: On `real_GFF` file, 
+- select only “CDS” information from chromosome “Schisto_mansoni.Chr_2.unplaced.SC_0213” 
+(Hint: use `grep` twice connect by pipe (` |` ))
+and save this information to a new file
+(Hint: use `>` or `>>` )
+Then use the output file,
+- extract gene ID, 
+- keep only unique ID, 
+- then sort by ID 
+- and save this information to a new file
 
-Using file from the previous command
-	extract gene ID, 
-	keep only unique ID, 
-	then sort by ID 
-	and save this information to a new file
-
-
-
-
-BONUS:
-
+**BONUS:**
 - In Bash, you can adjust colour display and how your username appear on the command prompt. 
 - Go to your home directory (doing just `cd` with no destination address with take you to your `home`)
 - Do `ls -a`. This will list all files in the directory, including hidden files (start with .)
@@ -233,3 +229,6 @@ BONUS:
 - Find out where in the .bashrc file determine this formatting feature, and try editting it. 
 **MAKE SURE YOU MAKE A COPY OF THE ORIGINAL COPY OF `.bashrc` FILE BEFORE EDITING IT**
 - The file `.bachrc` normally run automatically every time a new Terminal window is opened. You can also force run it while in session by doing `source ./.bashrc`
+
+---
+
