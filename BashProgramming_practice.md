@@ -184,6 +184,7 @@ Test whether your edit work:
 source .bashrc
 #TODO			# create a new empty just to test
 rm				# did you get a warning prompt to confirm your delete? 
+```
 
 ---
 
