@@ -1,0 +1,10 @@
+Schisto_mansoni.SC_0743	chado	contig	1	909	.	+	.	ID=contig_20094;Name=null
+Schisto_mansoni.SC_0743	chado	gene	496	699	.	-	.	ID=Smp_205860
+Schisto_mansoni.SC_0743	chado	CDS	496	699	.	-	0	ID=Smp_205860.1:exon:1;Parent=Smp_205860.1
+Schisto_mansoni.SC_0743	chado	mRNA	496	699	.	-	.	ID=Smp_205860.1;Parent=Smp_205860
+Schisto_mansoni.SC_0743	chado	polypeptide	496	699	.	-	ID=Smp_205860.1:pep;Dbxref=UniProtKB:G4M258;Derives_from=Smp_205860.1;product=hypothetical protein%3Bevidence%3DInferred from Electronic Annotatio;translation=mitsihlirhttvqshietaslpshplwnhpsllfpmrrqttlvrlcairnknnctttldrissfin
+Schisto_mansoni.SC_0743	chado	gap	910	1109	.	+	.	ID=Schisto_mansoni.SC_0743.embl:gap:909-1109
+Schisto_mansoni.SC_0743	chado	contig	1110	4471	.	+	.	ID=contig_20095;Name=null
+Schisto_mansoni.SC_0743	chado	gap	4472	4671	.	+	.	ID=Schisto_mansoni.SC_0743.embl:gap:4471-4671
+Schisto_mansoni.SC_0743	chado	contig	4672	5628	.	+	.	ID=contig_20096;Name=null
+
