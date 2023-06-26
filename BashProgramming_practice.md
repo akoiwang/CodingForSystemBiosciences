@@ -1,5 +1,5 @@
 # Checking your environment
-
+pwd
 
 # Navigating 
 
