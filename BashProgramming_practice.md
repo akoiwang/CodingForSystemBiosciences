@@ -28,8 +28,8 @@ ls			# list content of current directory
 ls Bash_exerciseFiles	# list content of `Bash_exerciseFiles` directory
 ls -l			#list with more information (long list)
 ls -l -h		#print file size in human-readable format
+ls -lh		#TODO
 ls -l -h -t	#TODO
-ls -lth		#TODO
 ```
 
 ## Navigating 
@@ -38,7 +38,6 @@ cd Bash_exerciseFiles		# change directory to `Bash_exerciseFiles` i.e. move your
 ls						#list the content of the directory you are in
 ls -l -h					#print file size in human-readable format
 ls -l -h -t				#TODO
-ls -lth					#TODO
 ```
 
 ## Work with files 
@@ -187,7 +186,7 @@ This will open .bashrc file in the coding space. Look for the part where it says
 
 **See if you can guess what it's doing from it's syntax?** #TODO
 
-Try adding another alias command that says "when I say `rm` what I mean is `rm -i` 
+Try adding another alias command that says "when I say `rm` what I mean is `rm -i`  - you can consult "the internet" :)
 Explain how you editted the `alias` part here #TODO
 
 Test whether your edit work:
