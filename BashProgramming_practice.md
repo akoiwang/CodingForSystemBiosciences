@@ -62,16 +62,23 @@ ls -lh Dataset2				# look inside the directory called `Dataset2`
 
 Well, it is not that tidy, is it? There are files with ID `17407` in `Dataset2` directory, and there are also some of files also beginning with `17407` outside the directory. 
 
+We can use `*` to mean *anything and everything, including blank space and nothing, except a line break*
+
+Try `ls 17407*`
+
+How many files are listed? 
+#TODO - write your answer here
+
 What are the names of these files? 
 #TODO - write your answer here
+
+Try `ls -1 17407*` (<< that is minus one, not minus small L)
 
 We can use `mv` to move files (i.e. change their locations)
 
 ```bash
-mv 17407_8_1.htseq-count.final Dataset2/ 	# move this file from "here" into "Dataset2"
+mv 17407_8_1.htseq-count.final Dataset2/ 	# move this one file from "here" into "Dataset2"
 ```
-
-We can use `*` to mean *anything and everything, including blank space and nothing, except a line break*
 
 ```bash
 mv 17407* Dataset2		# move any files that begin with 17407 into te directory "Dataset2"
