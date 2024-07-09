@@ -4,14 +4,17 @@
 
 ## INSTRUCTION 
 - Run the commands by taking one command at a time and paste it in the Terminal window in GitHub Codespaces
-- Try to GUESS/PREDICT what the output of the command will be 
-- RUN one command at a time... did you guess correctly? 
-- INVESTIGATE the command. Try to understand how it work. Ask if you get stuck. 
+- Try to **GUESS/PREDICT** what the output of the command will be 
+- **RUN** one command at a time... did you guess correctly? 
+- **INVESTIGATE** the command. Try to understand how it work. Ask if you get stuck. 
 - YOU CAN EDIT THE CODE, and see whether the result is what you expect. 
-- At some point, we will ask you to MODIFY a command to get a desired output 
-- At some point, we will ask you to MAKE a line of command by yourself 
-- REMEMBER: Don't be afraid of making mistakes. Don't get frightened if the screen return ERROR in red. Read the error message. It often tells you where the problems are. 
-- Texts after the # sign are comments. Computer ignore these texts. You do not need to copy the comment texts to run on the Terminal.
+- At some point, we will ask you to **MODIFY** a command to get a desired output 
+- At some point, we will ask you to **MAKE** a line of command by yourself 
+
+- **REMEMBER**: Don't be afraid of making mistakes. Don't get frightened if the screen return ERROR in red. Read the error message. It often tells you where the problems are. 
+
+- Texts after the # sign are **comments**. Computer ignore these texts. You do not need to copy the comment texts to run on the Terminal.
+
 - Notice the syntax of each command. They may seem to differ slightly from one another but there is some common patterns. 
 
 ** If confused, just ask :) ** 
@@ -20,11 +23,11 @@
 
 ## Checking your environment
 ```bash
-pwd		# the output will show your current location
+pwd			# the output will show your current location
 ls			# list content of current directory
 ls Bash_exerciseFiles	# list content of `Bash_exerciseFiles` directory
 ls -l			#list with more information (long list)
-ls -l -h		#TODO
+ls -l -h		#print file size in human-readable format
 ls -l -h -t	#TODO
 ls -lth		#TODO
 ```
@@ -32,7 +35,10 @@ ls -lth		#TODO
 ## Navigating 
 ```bash
 cd Bash_exerciseFiles		# change directory to `Bash_exerciseFiles` i.e. move yourself into the `Bash_exerciseFiles` directory
-ls			#list the content of the directory you are in
+ls						#list the content of the directory you are in
+ls -l -h					#print file size in human-readable format
+ls -l -h -t				#TODO
+ls -lth					#TODO
 ```
 
 ## Work with files 
@@ -44,8 +50,8 @@ ls Dataset1_15400 		# look inside the directory called `Dataset1_15400`
 Notice that there are some files with matching suffix with folder names. Look like the keeper of these files like to keep things tidy?!
 
 ```bash
-ls Dataset2				# look inside the directory called `Dataset2`
-# What are the output of this command? 
+ls -lh Dataset2				# look inside the directory called `Dataset2`
+# What are the output of this command? What are the file names?
 #TODO
 
 # How many files are in this directory? 
@@ -55,13 +61,18 @@ ls Dataset2				# look inside the directory called `Dataset2`
 #TODO
 ```
 
-Well, it is not that tidy, is it? There are files with ID `17407` in `Dataset2` directory, and there are also some of files also beginning with `17407` outside the directory. We can use `mv` to move files (i.e. change their locations)
+Well, it is not that tidy, is it? There are files with ID `17407` in `Dataset2` directory, and there are also some of files also beginning with `17407` outside the directory. 
+
+What are the names of these files? 
+#TODO
+
+We can use `mv` to move files (i.e. change their locations)
 
 ```bash
 mv 17407_8_1.htseq-count.final Dataset2/ 	# move this file from "here" into "Dataset2"
 ```
 
-We can use `*` to mean "anything and everything, including blank space and nothing"
+We can use `*` to mean *anything and everything, including blank space and nothing, except a line break*
 
 ```bash
 mv 17407* Dataset2		# move any files that begin with 17407 into te directory "Dataset2"
@@ -71,15 +82,12 @@ Did you notice when you did `ls Dataset2` previously that there were already som
 These files have the same names as two of the files that were moved over. What happened to the existing files with the same file names? 
 #TODO
 
-Explain how you came up with the answer above? 
-#TODO
-
 Let's do a bit more tidy-up. In our directory, all files that begin with `Smansoni` are reference from Schistosoma mansoni (a parasitic worm) genome data. Let's create a directory called `Ref_files` and move these files into the directory. 
 
 **Note** By convention, 
 - we normally capitalised the first letter of directory name. 
 - For file names, we normally use all small letter. 
-- Avoid using space in the file name. As you can see, space is treated with some meaning in Bash scripting )the space between command and input). Instead, use underscore (`my_file`), or mix capital letter into the middle word (`myFile`). 
+- Avoid using space in the file name. As you can see, space is treated with some meaning in Bash scripting (the space between command and input). Instead, use underscore (`my_file`), or mix capital letter into the middle word (`myFile`). 
 
 ```bash
 mkdir reference_Smansoni		# mkdir = make directory, follow by directory name
@@ -98,16 +106,18 @@ pwd							# check where you are
 cat mart_export_1.txt			# display all content of mart_export_1.txt file on the terminal console - you might not want to do this for most files. It will make Terminal look messy, and it's not very informative
 head mart_export_1.txt		# show the first 10 lines of the file
 tail mart_export_1.txt			# #TODO
-less mart_export_1.txt		# open the file in a controllable window. Try using up-arrow and down-arrow to scroll up and down the page. Try typing gg and Shift+g. Can you tell what happened? #TODO
+less mart_export_1.txt		# open the file in a controllable window. Try using up-arrow and down-arrow to scroll up and down the page. Try typing gg and Shift+g follow by a word inside the mart_export_1.txt file. Can you tell what happened.  #TODO
+# search the internet, what to do to search 'before' and 'after'
+#WHEN YOU WANT TO QUIT THE less WINDOW, TYPE q
 ```
 
 You might notice that the mart_export_1.txt is actually in FASTA format. Let's rename the file to have `.fasta` ending instead of `.txt`
 
-Previuosly we see `mv` can __move__ files to a new location. 
-`mv` can also be used to __rename__ a file.
+Previuosly we see `mv` can *move* files to a new location. 
+`mv` can also be used to *rename* a file.
 
 ```bash
-mv mart_export_1.txt mart_export_1.fastq		# rename the file. The syntax of command is mv currentfilename newfilename
+mv mart_export_1.txt mart_export_1.fasta		# rename the file. The syntax of command is mv currentfilename newfilename
 ```
 
 Now let's explore `mart_export 2.txt` next
@@ -122,7 +132,8 @@ We can create a new text file, copy, and remove.
 touch myNewFile.txt			# create a new empty file
 code myNewFile.txt			# open the file in the coding console in GitHub Codespace
 cp myNewFile.txt myNewFile2.txt	# make a copy into a new file name
-#TODO						# how would you copy the file myNewFile.txt into a different directory? Say into a new directory called TestFile? 
+#TODO						# create a new directory called TestFile
+#TODO						# copy the file myNewFile.txt into the directory TestFile a different directory?  
 ```
 
 ## Directing output 
@@ -159,7 +170,7 @@ Say we now don't really need the `fastaHeader.txt` file anymore. We can remove i
 
 ```bash
 rm fastaHeader.txt		# remove the file
-ls						check that it's gone
+ls						# check that it's gone
 ```
 
 Did you get any _"warning"_ or _"are you sure you want to delete?!"_ prompt before the file was removed? The warning is not a default for Linux. It will just delete! And the files will not be in the Recycle Bin either. They will just be GONE! after the `rm` command. 
@@ -182,7 +193,7 @@ Explain how you editted the `alias` part here #TODO
 Test whether your edit work:
 ```bash
 source .bashrc
-#TODO			# create a new empty just to test
+#TODO			# create a new empty file just to test
 rm				# did you get a warning prompt to confirm your delete? 
 ```
 
@@ -190,7 +201,26 @@ rm				# did you get a warning prompt to confirm your delete?
 
 WELL DONE!!!! We have covered much of the basic Bash Programming that will alllow you to be more familiar with the coding system for the follow weeks. You will also be using Bash a lot when analysing high-throughput data. There are more commands in Bash and Linux that we have not covered here but once you are familiar with Bash scripting, exploring those commands on-the-job will be more fulfilling than cramping them in now! 
 
-However, for those extra keen minds, feel free to explore and test yourself with more challenges below. They will show you more ways that Linux and Bash scripting can help you handle bioinformatic files with grace. Your assignment for week 2 ends HERE!! The rest of the content below is for fun. 
+However, for those extra keen minds, feel free to explore and test yourself with more challenges below. They will show you more ways that Linux and Bash scripting can help you handle bioinformatic files with grace. Your assignment for week 3 ends HERE!! The rest of the content below is for a fun bonus. 
+
+```
+#>  -------------- 
+#> Keep learning, stay curious 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+```
 
 Try learning the following functions using the `mart_export 2.txt` as input, or using a `gff` file.
 Manipulating column data : `sort`, `uniq`, `cut`, `paste`
