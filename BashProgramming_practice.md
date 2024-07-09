@@ -28,8 +28,8 @@ ls			# list content of current directory
 ls Bash_exerciseFiles	# list content of `Bash_exerciseFiles` directory
 ls -l			#list with more information (long list)
 ls -l -h		#print file size in human-readable format
-ls -lh		#TODO
-ls -l -h -t	#TODO
+ls -lh		#TODO - explain what this command do
+ls -l -h -t	#TODO - explain what this command do
 ```
 
 ## Navigating 
@@ -37,7 +37,7 @@ ls -l -h -t	#TODO
 cd Bash_exerciseFiles		# change directory to `Bash_exerciseFiles` i.e. move yourself into the `Bash_exerciseFiles` directory
 ls						#list the content of the directory you are in
 ls -l -h					#print file size in human-readable format
-ls -l -h -t				#TODO
+ls -l -h -t				#TODO - explain what this command does
 ```
 
 ## Work with files 
@@ -51,19 +51,19 @@ Notice that there are some files with matching suffix with folder names. Look li
 ```bash
 ls -lh Dataset2				# look inside the directory called `Dataset2`
 # What are the output of this command? What are the file names?
-#TODO
+#TODO - copy the output to here
 
 # How many files are in this directory? 
-#TODO
+#TODO - write your answer here
 
 # How big are these files?
-#TODO
+#TODO - write your answer here
 ```
 
 Well, it is not that tidy, is it? There are files with ID `17407` in `Dataset2` directory, and there are also some of files also beginning with `17407` outside the directory. 
 
 What are the names of these files? 
-#TODO
+#TODO - write your answer here
 
 We can use `mv` to move files (i.e. change their locations)
 
@@ -79,7 +79,7 @@ mv 17407* Dataset2		# move any files that begin with 17407 into te directory "Da
 
 Did you notice when you did `ls Dataset2` previously that there were already some files in the `Dataset2` directory? 
 These files have the same names as two of the files that were moved over. What happened to the existing files with the same file names? 
-#TODO
+#TODO - write your answer here
 
 Let's do a bit more tidy-up. In our directory, all files that begin with `Smansoni` are reference from Schistosoma mansoni (a parasitic worm) genome data. Let's create a directory called `Ref_files` and move these files into the directory. 
 
@@ -91,11 +91,11 @@ Let's do a bit more tidy-up. In our directory, all files that begin with `Smanso
 ```bash
 mkdir reference_Smansoni		# mkdir = make directory, follow by directory name
 cd reference_Smansoni		# change directory into the reference_Smansoni
-#TODO						# list the content of this directory
+#TODO	- what command to use?					# list the content of this directory
 ls ../						# list the content of the directory just one step outside our current working directory
-#TODO						# move Smansoni* files from outside into this directory
-#TODO						# check inside to see that all Smansoni files have been moved
-#TODO						# check outside to see that all Smansoni files have been moved
+#TODO - what command to use?						# move Smansoni* files from outside into this directory
+#TODO - what command to use?						# check inside to see that all Smansoni files have been moved
+#TODO - what command to use?						# check outside to see that all Smansoni files have been moved
 ```
 
 ## Look into files
@@ -104,8 +104,8 @@ cd ../						# change directory to one step outside the current working directory
 pwd							# check where you are
 cat mart_export_1.txt			# display all content of mart_export_1.txt file on the terminal console - you might not want to do this for most files. It will make Terminal look messy, and it's not very informative
 head mart_export_1.txt		# show the first 10 lines of the file
-tail mart_export_1.txt			# #TODO
-less mart_export_1.txt		# open the file in a controllable window. Try using up-arrow and down-arrow to scroll up and down the page. Try typing gg and Shift+g follow by a word inside the mart_export_1.txt file. Can you tell what happened.  #TODO
+tail mart_export_1.txt			# #TODO - explain what this command do
+less mart_export_1.txt		# open the file in a controllable window. Try using up-arrow and down-arrow to scroll up and down the page. Try typing gg and Shift+g follow by a word inside the mart_export_1.txt file. Can you tell what happened.  #TODO - write you answer here
 # search the internet, what to do to search 'before' and 'after'
 #WHEN YOU WANT TO QUIT THE less WINDOW, TYPE q
 ```
@@ -122,8 +122,8 @@ mv mart_export_1.txt mart_export_1.fasta		# rename the file. The syntax of comma
 Now let's explore `mart_export 2.txt` next
 
 ```bash
-#TODO						# use a Bash command to with the first 10 lines of mart_export 2.txt. Notice the space in the file name. Use internet to find out how to deal with file name with space. 
-#TODO						# rename the mart_export 2.txt into something is more representative of its content. It is always a good idea to give meaningful names to your files
+#TODO	- what command to use					# use a Bash command to with the first 10 lines of mart_export 2.txt. Notice the space in the file name. Use internet to find out how to deal with file name with space. 
+#TODO	- what command to use						# rename the mart_export 2.txt into something is more representative of its content. It is always a good idea to give meaningful names to your files
 ```
 
 We can create a new text file, copy, and remove. 
@@ -131,8 +131,8 @@ We can create a new text file, copy, and remove.
 touch myNewFile.txt			# create a new empty file
 code myNewFile.txt			# open the file in the coding console in GitHub Codespace
 cp myNewFile.txt myNewFile2.txt	# make a copy into a new file name
-#TODO						# create a new directory called TestFile
-#TODO						# copy the file myNewFile.txt into the directory TestFile a different directory?  
+#TODO	- what command to use					# create a new directory called TestFile
+#TODO	- what command to use						# copy the file myNewFile.txt into the directory TestFile a different directory?  
 ```
 
 ## Directing output 
@@ -175,24 +175,22 @@ ls						# check that it's gone
 Did you get any _"warning"_ or _"are you sure you want to delete?!"_ prompt before the file was removed? The warning is not a default for Linux. It will just delete! And the files will not be in the Recycle Bin either. They will just be GONE! after the `rm` command. 
 
 We can make the warning prompt the default at least for our log-in profile. 
-We change this in the `.bashrc` profile. `.bashrc` contain multiple built-in commands that will run every time a new Terminal window is open. 
+We change this in the `.bashrc` profile. `.bashrc` contain multiple built-in commands that will run every time a new Terminal window is open (Note: in Codespace, the `.bashrc` file is not provided, we can create on using command `code .bashrc`). 
 
 ```bash
 cd				# go to our home directory
 code .bashrc
 ```
 
-This will open .bashrc file in the coding space. Look for the part where it says `alias`
+This will open .bashrc file in the coding space. 
 
-**See if you can guess what it's doing from it's syntax?** #TODO
-
-Try adding another alias command that says "when I say `rm` what I mean is `rm -i`  - you can consult "the internet" :)
+Try adding an `alias` command that says "when I say `rm` what I mean is `rm -i`  - you can consult "the internet"; search using keyword `alias unix bashrc` :)
 Explain how you editted the `alias` part here #TODO
 
 Test whether your edit work:
 ```bash
 source .bashrc
-#TODO			# create a new empty file just to test
+#TODO			# create a new empty file just to test (Hint: use command `touch`)
 rm				# did you get a warning prompt to confirm your delete? 
 ```
 
