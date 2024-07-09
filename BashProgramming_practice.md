@@ -122,7 +122,7 @@ mv mart_export_1.txt mart_export_1.fasta		# rename the file. The syntax of comma
 Now let's explore `mart_export 2.txt` next
 
 ```bash
-#TODO	- what command to use					# use a Bash command to with the first 10 lines of mart_export 2.txt. Notice the space in the file name. Use internet to find out how to deal with file name with space. 
+#TODO	- what command to use					# use a Bash command to with the first 10 lines of mart_export 2.txt. Notice the space in the file name. **Use internet to find out how to deal with file name with space.** (Hint: option 1, use \ to *escape* special characters and turn them into plain text; option 2, put single quote symbol ' ' front and back of file name to turn them into plain text)
 #TODO	- what command to use						# rename the mart_export 2.txt into something is more representative of its content. It is always a good idea to give meaningful names to your files
 ```
 
