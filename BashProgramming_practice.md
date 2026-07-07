@@ -1,4 +1,6 @@
-# Linux & Bash programming - Practice
+# OUT-DATED - DO NOT USE 
+
+Linux & Bash programming - Practice
 
 ---
 
